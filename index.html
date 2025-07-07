@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Farm Overlay with QR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .mask-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(50, 50, 50, 0.7), rgba(50, 50, 50, 0));
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5%;
+        }
+
+        .intro-text {
+            color: white;
+            max-width: 60%;
+            z-index: 3;
+            font-size: 1.2rem;
+        }
+
+        .qr-container {
+            margin-top: 200px;
+            text-align: center;
+        }
+
+        .qr-container img {
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .qr-container p {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .intro-text {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+
+            .qr-container img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-container">
+        <img src="bernd-dittrich-_wlHb1_k2fc-unsplash.jpg" alt="Farm" class="bg-image">
+        <div class="mask-overlay">
+            <div class="intro-text">
+                <h1>蔚县果蔬协会</h1>
+                <p>
+                    蔚县果蔬协会以 “服务会员、繁荣产业、振兴乡村” 为宗旨，紧密围绕国家乡村振兴政策与农业高质量发展要求，
+                    依托蔚县温带大陆性季风气候与 “南部山区、中部河川、北部丘陵” 的地貌优势，聚焦产业升级，建设示范基地加速
+                    科技成果转化；推动蔚县果蔬产业从单一种植向 
+                    “种植 - 加工 - 销售 - 农旅” 融合发展转型，为乡村产业振兴注入持续动力。
+                </p>
+                <div class="qr-container">
+                    <a href="https://www.wjx.cn/vm/e6Jvy8k.aspx">
+                        <img src="qrcode_for_gh_0f018393f9a3_258.jpg" alt="QR Code">
+                    </a>
+                    <p>使用微信扫码或 <a href="https://www.wjx.cn/vm/e6Jvy8k.aspx" style="color: #90caf9;">点击这里</a> 申请</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
